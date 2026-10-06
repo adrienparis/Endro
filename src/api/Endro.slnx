@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="../../tests/Endro.Domain.Tests/Endro.Domain.Tests.csproj" />
+  <Project Path="Endro.Api/Endro.Api.csproj" />
+  <Project Path="Endro.Application/Endro.Application.csproj" />
+  <Project Path="Endro.Domain/Endro.Domain.csproj" />
+  <Project Path="Endro.Infrastructure/Endro.Infrastructure.csproj" />
+</Solution>
