@@ -3,5 +3,6 @@ export type AppItem = {
     description: string
     color: string
     route: string
+    icon: string
     statut: "available" | "soon"
 }

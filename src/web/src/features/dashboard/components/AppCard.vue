@@ -7,11 +7,9 @@
 </script>
 
 <template>
-    <div class="card" :class="{ disabled: app.statut === 'soon'}">
+    <a :href="app.route" class="card" :class="{ disabled: app.statut === 'soon'}">
         <div class="icon">
-            <svg viewBox="0 0 24 24" width="40" height="40">
-                <path fill="currentColor" d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/>
-            </svg>
+            <img :src="app.icon" alt="" width="40" height="40" />
         </div>
         <div class="info">
             <h2>{{ app.name }}</h2>
@@ -19,7 +17,7 @@
         </div>
         <div class="arrow">→</div>
         <span v-if="app.statut === 'soon'" class="coming-soon">Bientôt</span>
-    </div>
+    </a>
 </template>
 
 <style scoped>
@@ -85,6 +83,41 @@
     border-radius: 12px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+}
+
+
+.card:hover .icon {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.info {
+    flex: 1;
+}
+
+.info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.info p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.arrow {
+    font-size: 24px;
+    color: #ccc;
+    transition: all 0.2s ease;
+}
+
+.card:hover .arrow {
+    color: #007AFF;
+    transform: translateX(4px);
 }
 
 </style>

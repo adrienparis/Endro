@@ -7,4 +7,13 @@
 body {
   font-family: var(--font);
   background-color: var(--color-bg);
+  margin: 0px 0px 8px 0px
+}
+
+html {
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
